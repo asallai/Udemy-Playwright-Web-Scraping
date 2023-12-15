@@ -1,1 +1,1 @@
-Udemy course: Automated Software Testing with Playwright (by Kaniel Outis) Section: Webscraping
+Udemy course: Automated Software Testing with Playwright (by Kaniel Outis) Section: Web Scraping with Playwright
