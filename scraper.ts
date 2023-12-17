@@ -1,5 +1,6 @@
 const playwright = require("playwright")
 const random_useragent = require("random-useragent")
+const fs = require("fs")
 
 const BASE_URL = "https://github.com/topics/playwright"
 
@@ -30,9 +31,11 @@ const BASE_URL = "https://github.com/topics/playwright"
         })
     })
 
-    console.log(repositories)
+    // console.log(repositories)
 
     // Store data into file
+    const logger = fs.createWriteStream("data.txt", { flag: "w" })
+    logger.write(JSON.stringify(repositories, null, " "))
     
     // Close browser
     await browser.close()
